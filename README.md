@@ -22,7 +22,7 @@ Automates sharing of video url on facebook wall when uploaded on Youtube
 * Create a new project and go to API manager.
 * Make sure the status is ON for YouTube Data API v3.
 * Select Credentials from left sidebar and generate API key.
-* [Resource](https://developers.google.com/youtube/registering_an_application)
+* [Resource](https://developers.google.com/youtube/registering_an_application) for YouTube API doc
 * Go to [Api explorer for YouTube](https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.channels.list)
 * Fill `part` as `ContentDetails` and `mine` as `true`.
 * Make sure the status is ON for OAuth 2.0 and grant permission for all scopes.
@@ -33,6 +33,7 @@ Automates sharing of video url on facebook wall when uploaded on Youtube
 
 * Go to [Developers facebook](https://developers.facebook.com/tools/explorer)
 * Get Access token from `Extended Permissions` selecting `publish_actions`
+
 ##Development Purpose
 
-Follow [Installation](https://github.com/trishnaguha/AutoShare#installation) and [Usage](https://github.com/trishnaguha/AutoShare#usage)
+Follow [Installation](https://github.com/trishnaguha/AutoShare#installation) and [Usage](https://github.com/trishnaguha/AutoShare#usage) for development
