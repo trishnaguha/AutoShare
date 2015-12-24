@@ -1,28 +1,33 @@
-'''AutoShare'''
+"""AutoShare"""
 
 import requests
 import json
-from settings import *
+from settings import Facebook_base_url,Access_token
+from youtube_url_generator import video_url
 
-def video_url():
 
-    # Get response
-    r = requests.get(Youtube_base_url + Youtube_api_key)
+def facebook_post():
+    """Posts the video url on facebook wall"""
 
-    # Generates the latest video url
+    post_message = video_url
+    post_message.replace(' ', '+')
+
+    """Posting on facebook wall"""
+    r = requests.post(Facebook_base_url + post_message + "&access_token=" + Access_token)
+
+    # Prints error if posting is not successful
     try:
-        if r.status_code == 200:
-            json_data = json.loads(r.text)
-            video_id = (json_data['items'][0]['snippet']['resourceId']['videoId'])
-            video_url = Youtube_watch_url + video_id
-            print(video_url)
-        else:
+        if r.status_code != 200:
             raise Exception(r)
+        else:
+            pass
     except Exception as e:
+        json_error = json.loads(r.text)
+        print("Posting is not successful")
+        print('ErrorMessage: ' + (json_error['error']['message']))
+        print('ErrorType: ' + (json_error['error']['type']))
         print(e)
 
-def main():
-    video_url()
 
 if __name__ == '__main__':
-    main()
+    facebook_post()
