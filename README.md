@@ -14,7 +14,7 @@ Automates sharing of video url on facebook wall when uploaded on Youtube
 ##Usage##
 
 * Get PlaylistId and API Key from Youtube and Access Token from Facebook.
-* Add them to `Youtube_playlistId`,`Youtube_api_key`, and `Access_token` is settings.py
+* Add them to `Youtube_playlistId`, `Youtube_api_key` and `Access_token` is settings.py
 * `python3 autoshare.py`
 
 ###YouTube Settings###
