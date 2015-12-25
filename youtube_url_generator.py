@@ -6,7 +6,7 @@ from settings import *
 
 
 # Gets response
-r = requests.get(Youtube_base_url + Youtube_api_key)
+r = requests.get(Youtube_base_url)
 
 # Generates the latest video url
 try:

@@ -33,7 +33,7 @@ Automates sharing of video url on facebook wall when uploaded on Youtube
 ###Facebook Settings###
 
 * Go to [Developers facebook](https://developers.facebook.com/tools/explorer)
-* Get Access token from `Extended Permissions` selecting `publish_actions`
+* Get Access token from `Extended Permissions` selecting `publish_actions` and from `User Data Permissions` selecting `user_posts`
 
 ##Development Purpose
 
