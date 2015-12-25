@@ -12,20 +12,44 @@ def facebook_post():
     post_message = video_url
     post_message.replace(' ', '+')
 
-    """Posting on facebook wall"""
-    r = requests.post(Facebook_base_url + post_message + "&access_token=" + Access_token)
-
-    # Prints error if posting is not successful
+    response_get = requests.get(Facebook_base_url + "?access_token=" + Access_token)
     try:
-        if r.status_code != 200:
-            raise Exception(r)
+        if response_get.status_code == 200:
+            try:
+                get_data = json.loads(response_get.text)
+                for i in get_data['data']:
+
+                    # Checks if the post is already on facebook wall
+                    if (i['message']) == post_message:
+                        raise Exception("DuplicateMessageError: The link has already been shared before: No Duplicate post allowed")
+                else:
+                    """Posting on facebook wall"""
+                    response_post = requests.post(Facebook_base_url + "?message=" + post_message + "&access_token=" + Access_token)
+
+                    # Prints error if posting is not successful
+                    try:
+                        if response_post.status_code != 200:
+                            raise Exception(response_post)
+                        else:
+                            pass
+                    except Exception as e:
+                        get_error = json.loads(response_post.text)
+                        print("Posting is not successful")
+                        print('ErrorMessage: ' + (get_error['error']['message']))
+                        print('ErrorType: ' + (get_error['error']['type']))
+                        print(e)
+
+            # Prints error if message/post is duplicate
+            except Exception as e:
+                print(e)
         else:
-            pass
+            raise Exception(response_get)
+
+    # Prints error if unable to retrieve posts
     except Exception as e:
-        json_error = json.loads(r.text)
-        print("Posting is not successful")
-        print('ErrorMessage: ' + (json_error['error']['message']))
-        print('ErrorType: ' + (json_error['error']['type']))
+        error_message = json.loads(response_get.text)
+        print('ErrorMessage: ' + (error_message['error']['message']))
+        print('ErrorType: ' + (error_message['error']['type']))
         print(e)
 
 
