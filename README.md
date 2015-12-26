@@ -5,6 +5,7 @@ Automates sharing of video url on facebook wall when uploaded on Youtube
 
 ##Installation##
 
+    sudo dnf install python3-virtualenv
     virtualenv venv
     source venv/bin/activate
     git clone https://github.com/trishnaguha/AutoShare.git
