@@ -22,7 +22,7 @@ def facebook_post():
                     # Checks if the post is already on facebook wall
                     if (i['message']) == post_message:
                         raise Exception("DuplicateMessageError: The link has already" +
-                                    "been shared before: No Duplicate post allowed")
+                                    " been shared before: No Duplicate post allowed")
                 else:
                     """Posting on facebook wall"""
                     response_post = requests.post(Facebook_base_url + "?message=" + \
