@@ -13,10 +13,10 @@ try:
     if r.status_code == 200:
         json_data = json.loads(r.text)
 
-        # Retrieve video title
+        # Retrieves video title
         video_title = (json_data['items'][0]['snippet']['title'])
 
-        # Retrieve video_id for video url
+        # Retrieves video_id for video url
         video_id = (json_data['items'][0]['snippet']['resourceId']['videoId'])
         video_url = Youtube_watch_url + video_id
 
