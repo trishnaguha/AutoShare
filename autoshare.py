@@ -3,13 +3,13 @@
 import requests
 import json
 from settings import Facebook_base_url,Access_token
-from youtube_url_generator import video_url
+from youtube_url_generator import video_post
 
 
 def facebook_post():
     """Posts the video url on facebook wall"""
 
-    post_message = video_url
+    post_message = video_post
     post_message.replace(' ', '+')
 
     response_get = requests.get(Facebook_base_url + "?access_token=" + Access_token)
