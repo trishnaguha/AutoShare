@@ -1,7 +1,8 @@
 AutoShare
 ===========
 
-Automates sharing of video url on facebook wall when uploaded on Youtube
+Automates sharing of video url on facebook wall when uploaded on Youtube.
+The application uses Python 3. But you can run with Python 2 as well.
 
 ##Installation##
 
