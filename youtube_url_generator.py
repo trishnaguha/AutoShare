@@ -6,12 +6,13 @@ from settings import *
 
 
 # Gets response
-r = requests.get(Youtube_base_url)
+response = requests.get(Youtube_base_url)
+r = response.status_code
 
 # Generates the latest video url
 try:
-    if r.status_code == 200:
-        json_data = json.loads(r.text)
+    if r == 200:
+        json_data = json.loads(response.text)
 
         # Retrieves video title
         video_title = (json_data['items'][0]['snippet']['title'])
