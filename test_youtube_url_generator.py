@@ -75,7 +75,7 @@ class TestYoutubePost(unittest.TestCase):
             self.assertEqual(post, video_post, video_post)
 
     def tearDown(self):
-        """Deletes the file created for setup"""
+        """Deletes the file created for test"""
 
         os.remove('response.json')
 
