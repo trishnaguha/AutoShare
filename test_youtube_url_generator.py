@@ -64,12 +64,12 @@ class TestYoutubePost(unittest.TestCase):
             self.assertEqual(id, video_id, video_id)
 
             # Checks video url
-            video_url = watch_url + id
+            video_url = watch_url + video_id
             url = 'https://www.youtube.com/watch?v=jIBelHyXhmY'
             self.assertEqual(url, video_url, video_url)
 
             # Checks video post
-            video_post = title + '\n' + url
+            video_post = video_title + '\n' + video_url
             post = ('Begun Posto (Eggplant curry with Poppy seed) Bengali recipe' + '\n' 
                         + 'https://www.youtube.com/watch?v=jIBelHyXhmY')
             self.assertEqual(post, video_post, video_post)
