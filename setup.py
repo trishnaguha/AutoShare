@@ -1,6 +1,6 @@
 from setuptools import setup
 
-requries = [
+requires = [
     'autopep8==1.2.1',
     'pep8==1.6.2',
     'requests==2.8.1',
