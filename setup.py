@@ -10,7 +10,6 @@ requries = [
 setup(name='AutoShare',
       version='1.0',
       description='An app that automates sharing of video on Facebook wall when uploaded on Youtube',
-      long_description=README,
       author='Trishna Guha',
       author_email='trishnaguha17@gmail.com',
       url='https://github.com/trishnaguha/AutoShare',
