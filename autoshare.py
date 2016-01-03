@@ -13,8 +13,9 @@ def facebook_post():
     post_message.replace(' ', '+')
 
     response_get = requests.get(Facebook_base_url + "?access_token=" + Access_token)
+    r_get = response_get.status_code
     try:
-        if response_get.status_code == 200:
+        if r_get == 200:
             try:
                 get_data = json.loads(response_get.text)
                 for i in get_data['data']:
@@ -27,11 +28,12 @@ def facebook_post():
                     """Posting on facebook wall"""
                     response_post = requests.post(Facebook_base_url + "?message=" + \
                                         post_message + "&access_token=" + Access_token)
+                    r_post = response_post.status_code
 
                     # Prints error if posting is not successful
                     try:
-                        if response_post.status_code != 200:
-                            raise Exception(response_post)
+                        if r_post != 200:
+                            raise Exception(r_post)
                         else:
                             pass
                     except Exception as e:
@@ -45,7 +47,7 @@ def facebook_post():
             except Exception as e:
                 print(e)
         else:
-            raise Exception(response_get)
+            raise Exception(r_get)
 
     # Prints error if unable to retrieve posts
     except Exception as e:
