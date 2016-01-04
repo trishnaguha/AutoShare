@@ -17,7 +17,7 @@ def application(environ, start_response):
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Welcome to OpenShift</title>
+  <title>AutoShare</title>
 <style>
 
 /*!
@@ -154,7 +154,7 @@ hgroup {
 }
 footer {
     margin: 50px 0 25px;
-    font-size: 11px;
+    font-size: 14px;
 }
 h1, h2, h3 {
   color: #000;
@@ -175,11 +175,11 @@ h1:after {
   background-color: #ddd;
 }
 h2 {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 400;
 }
 h3 {
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 400;
   margin: 0 0 .3em;
 }
@@ -220,61 +220,24 @@ pre {
 <body>
 <section class='container'>
           <hgroup>
-            <h1>Welcome to your Python application on OpenShift</h1>
+            <h1>Welcome to AutoShare</h1>
           </hgroup>
 
         <div class="row">
           <section class='col-xs-12 col-sm-6 col-md-6'>
             <section>
-              <h2>Deploying code changes</h2>
-                <p>OpenShift uses the <a href="http://git-scm.com/">Git version control system</a> for your source code, and grants you access to it via the Secure Shell (SSH) protocol. In order to upload and download code to your application you need to give us your <a href="https://developers.openshift.com/en/managing-remote-connection.html">public SSH key</a>. You can upload it within the web console or install the <a href="https://developers.openshift.com/en/managing-client-tools.html">RHC command line tool</a> and run <code>rhc setup</code> to generate and upload your key automatically.</p>
+              <h2>What is AutoShare?</h2>
+                <p>AutoShare is a Python application that shares video on your <a href="https://www.facebook.com/">Facebook</a> wall when it is uploaded on <a href="https://www.youtube.com/">Youtube</a>.</p>
 
-                <h3>Working in your local Git repository</h3>
-                <p>If you created your application from the command line and uploaded your SSH key, rhc will automatically download a copy of that source code repository (Git calls this 'cloning') to your local system.</p>
-
-                <p>If you created the application from the web console, you'll need to manually clone the repository to your local system. Copy the application's source code Git URL and then run:</p>
-
-<pre>$ git clone &lt;git_url&gt; &lt;directory_to_create&gt;
-
-# Within your project directory
-# Commit your changes and push to OpenShift
-
-$ git commit -a -m 'Some commit message'
-$ git push</pre>
-                  <ul>
-                    <li><a href="https://developers.openshift.com/en/managing-modifying-applications.html">Learn more about deploying and building your application</a></li>
-                    <li>See the README file in your local application Git repository for more information on the options for deploying applications.</li>
-                  </ul>
-
+                <h2>How to use the application?</h2>
+                <p>In order to use the application you need to follow <a href="https://github.com/trishnaguha/AutoShare/blob/master/README.md">AutoShare Configuration</a>.</p>
             </section>
-
           </section>
-          <section class="col-xs-12 col-sm-6 col-md-6">
 
-                <h2>Managing your application</h2>
-
-                <h3>Web Console</h3>
-                <p>You can use the OpenShift web console to enable additional capabilities via cartridges, add collaborator access authorizations, designate custom domain aliases, and manage domain memberships.</p>
-
-                <h3>Command Line Tools</h3>
-                <p>Installing the <a href="https://developers.openshift.com/en/managing-client-tools.html">OpenShift RHC client tools</a> allows you complete control of your cloud environment. Read more on how to manage your application from the command line in our <a href="https://www.openshift.com/user-guide">User Guide</a>.
-                </p>
-
-                <h2>Development Resources</h2>
-                  <ul>
-                    <li><a href="https://developers.openshift.com/en/python-overview.html">Getting Started with Python on OpenShift</a></li>
-                    <li><a href="https://developers.openshift.com">Developer Center</a></li>
-                    <li><a href="https://www.openshift.com/user-guide">User Guide</a></li>
-                    <li><a href="https://help.openshift.com">Help Center</a></li>
-                    <li><a href="http://stackoverflow.com/questions/tagged/openshift">Stack Overflow questions for OpenShift</a></li>
-                    <li><a href="http://git-scm.com/documentation">Git documentation</a></li>
-                  </ul>
-
-
-          </section>
         </div>
 
         <footer>
+          Contents copyright 2015 <a href="mailto:trishnaguha17@gmail.com">Trishna Guha</a>. SourceCode <a href="https://github.com/trishnaguha/AutoShare">@AutoShare</a> written by <a href="https://trishnag.wordpress.com">Trishna Guha</a>.
           <div class="logo"><a href="https://www.openshift.com/"></a></div>
         </footer>
 </section>
