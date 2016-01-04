@@ -1,3 +1,6 @@
 autopep8==1.2.1
+AutoShare==1.0
+mod-wsgi==4.4.21
+mod-wsgi-httpd==2.4.12.6
 pep8==1.6.2
 requests==2.8.1

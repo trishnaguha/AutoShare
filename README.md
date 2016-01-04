@@ -6,12 +6,8 @@ The application uses Python 3. But you can run with Python 2 as well.
 
 ##Installation##
 
-    sudo dnf install python3-virtualenv
-    virtualenv venv
-    source venv/bin/activate
     git clone https://github.com/trishnaguha/AutoShare.git
     cd AutoShare
-    pip install -r requirements.txt
 
 ##Usage##
 
@@ -38,5 +34,17 @@ The application uses Python 3. But you can run with Python 2 as well.
 * Get Access token from `Extended Permissions` selecting `publish_actions` and from `User Data Permissions` selecting `user_posts`
 
 ##Development Purpose
+
+    sudo dnf install python-virtualenv
+    virtualenv venv
+    source venv/bin/activate
+    git clone https://github.com/trishnaguha/AutoShare.git
+    cd AutoShare
+    python setup.py install
+
+##Local Server Setup
+
+    mod_wsgi-express start-server wsgi.py
+This will launch the application on [localhost:8000](http://127.0.0.1:8000/)
 
 Follow [Installation](https://github.com/trishnaguha/AutoShare#installation) and [Usage](https://github.com/trishnaguha/AutoShare#usage) for development

@@ -1,3 +1,7 @@
 *.py~
 *.pyc
 *.swp
+dist/
+*egg-info/
+*.wsgi
+*~
