@@ -44,7 +44,8 @@ The application uses Python 3. But you can run with Python 2 as well.
 
 ##Local Server Setup
 
-    mod_wsgi-express start-server wsgi.py
+    chmod +x runserver.sh
+    ./runserver.sh
 This will launch the application on [localhost:8000](http://127.0.0.1:8000/)
 
 Follow [Installation](https://github.com/trishnaguha/AutoShare#installation) and [Usage](https://github.com/trishnaguha/AutoShare#usage) for development
